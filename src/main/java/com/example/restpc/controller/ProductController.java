@@ -32,6 +32,7 @@ public class ProductController {
         return new ResponseEntity<>(productService.deleteProductById(productId), HttpStatus.OK);
     }
 
+
     @GetMapping("searchproduct/{productId}")
     public ResponseEntity<?> fetchByProductId(@PathVariable int productId){
         return new ResponseEntity<>(productService.getProductByProductId(productId),HttpStatus.FOUND);
